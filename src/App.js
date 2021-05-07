@@ -9,8 +9,8 @@ import NavBar from './NavBar'
 function App() {
   return (
     <div>
+    <NavBar />
     <Switch>
-      <NavBar />
       <Route path='/home'>
         <Home />
       </Route>
