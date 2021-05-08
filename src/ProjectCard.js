@@ -1,6 +1,9 @@
 import React from 'react'
+// import MyDnD from '../images/MyDnD'
+// import ApartmentHunter from '../images/ApartmentHunter'
+// import MiddleSchoolMadness from '../images/MiddleSchoolMadness'
 
-const ProjectCard = () => {
+const ProjectCard = ({ name }) => {
     return (
         <div>
             
