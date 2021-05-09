@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import BlogCard from './BlogCard'
 
 const BlogContainer = () => {
     const [blogs, setBlogs] = useState([])
@@ -8,8 +9,9 @@ const BlogContainer = () => {
             .then(r => r.json())
             .then(data => setBlogs(data.items))
     }, [])
-
-    const displayedBlogs = blogs.map(blog => {
+    
+    const filteredBlogs = blogs.filter(blog => blog.categories.length !== 0)
+    const displayedBlogs = filteredBlogs.map(blog => {
         return <BlogCard 
             key={blog.title}
             blog={blog}

@@ -1,6 +1,6 @@
 import '../App.css';
 import { Switch, Route } from 'react-router-dom'
-import BlogPage from './BlogPage'
+import BlogContainer from './BlogContainer'
 import Home from './Home'
 import ContactPage from './ContactPage'
 import ProjectPage from './ProjectPage'
@@ -18,7 +18,7 @@ function App() {
         <ContactPage />
       </Route>
       <Route path='/blogs'>
-        <BlogPage />
+        <BlogContainer />
       </Route>
       <Route path='/projects'>
         <ProjectPage />
