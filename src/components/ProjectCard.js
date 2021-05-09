@@ -33,7 +33,7 @@ const ProjectCard = ({ name }) => {
     return (
         <Card>
             <Image src={projectObject[name].image} wrapped ui={false} />
-            <Card.Header>{name}</Card.Header>
+            <Card.Header>{projectObject[name].title}</Card.Header>
             <Card.Content extra>
                 <Button onClick={()=>window.open(projectObject[name].frontend, '_blank')}>Frontend</Button>
                 <Button onClick={()=>window.open(projectObject[name].backend, '_blank')}>Backend</Button>
