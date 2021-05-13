@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BlogCard from './BlogCard'
+import { Header, Segment, Card } from 'semantic-ui-react'
 
 const BlogContainer = () => {
     const [blogs, setBlogs] = useState([])
@@ -20,7 +21,12 @@ const BlogContainer = () => {
 
     return (
         <div>
-            {displayedBlogs}
+            <Header as='h1'>Blogs</Header>
+            <Segment basic style={{width: '50em', maxHeight: '70vh'}}>
+                <Card.Group itemsPerRow={3}>
+                    {displayedBlogs}
+                </Card.Group>      
+                </Segment>
         </div>
     )
 }
