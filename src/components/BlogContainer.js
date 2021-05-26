@@ -21,9 +21,9 @@ const BlogContainer = () => {
 
     return (
         <div>
-            <Header as='h1'>Blogs</Header>
-            <Segment basic style={{width: '50em', maxHeight: '70vh'}}>
-                <Card.Group itemsPerRow={3}>
+            <Header textAlign='center' as='h1'>Blogs</Header>
+            <Segment basic style={{maxHeight: '70vh'}}>
+                <Card.Group itemsPerRow={4}>
                     {displayedBlogs}
                 </Card.Group>      
                 </Segment>

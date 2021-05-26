@@ -6,11 +6,11 @@ const BlogCard = ({ blog }) => {
 
 
     return (
-        <Card onClick={() => window.open(blog.link, '_blank')}>
-            <Image src={blog.thumbnail} wrapped ui={false} />
+        <Card color='blue' onClick={() => window.open(blog.link, '_blank')}>
+            <Image src={blog.thumbnail} style={{height: '15em'}}/>
             <Card.Content>
-                <Card.Header>{blog.title}</Card.Header>
-                <Card.Meta>{new Date(blog.pubDate).toDateString()}</Card.Meta>
+                <Card.Header textAlign='center'>{blog.title}</Card.Header>
+                <Card.Meta textAlign='center'>{new Date(blog.pubDate).toDateString()}</Card.Meta>
             </Card.Content>
             
         </Card>

@@ -38,9 +38,11 @@ const ProjectCard = ({ name }) => {
             <Image src={projectObject[name].image} size='big' />
             <Card.Content extra>
             <Card.Header as='h2' textAlign='center'>{projectObject[name].title}</Card.Header>
-                <Button onClick={()=>window.open(projectObject[name].frontend, '_blank')}>Frontend</Button>
-                <Button onClick={()=>window.open(projectObject[name].backend, '_blank')}>Backend</Button>
-                <Button onClick={()=>window.open(projectObject[name].demo, '_blank')}>Demo</Button>
+            <Button.Group fluid>
+                <Button color='violet' onClick={()=>window.open(projectObject[name].frontend, '_blank')}>Frontend</Button>
+                <Button color='blue' onClick={()=>window.open(projectObject[name].backend, '_blank')}>Backend</Button>
+                <Button color='black' onClick={()=>window.open(projectObject[name].demo, '_blank')}>Demo</Button>
+            </Button.Group>
             </Card.Content>
         </Card>
     )
