@@ -6,7 +6,7 @@ const HomeLinks = () => {
     return (
         <div>
             <a href='https://www.linkedin.com/in/maxbeneke/' target='_blank' rel='noreferrer'>
-                <Icon name='linkedin' size='big'/> 
+                <Icon name='linkedin' color='black' size='big'/> 
             </a>
             <a href='https://github.com/MaxBeneke' target='_blank' rel='noreferrer'>
                 <Icon name='github' color='black' size='big'/> 

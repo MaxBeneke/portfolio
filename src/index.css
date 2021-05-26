@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to bottom right, #caf0f8, #0096c7);
 }
 
 code {
@@ -12,7 +13,3 @@ code {
     monospace;
 }
 
-h1 {
-  font-family: Optima, sans-serif;
-  color: 'blue';
-}

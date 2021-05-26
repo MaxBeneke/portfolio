@@ -38,7 +38,7 @@ const ProjectDescription = ({ name }) => {
                 {projectObject[name].title}
             </H2>
             <Header as='h5'>{projectObject[name].technologies.join(', ')}</Header>
-            <List bulleted relaxed='very' style={{color: '#0077b6'}}>
+            <List bulleted relaxed='very' style={{color: '#0077b6', fontFamily: 'Georgia, serif', fontSize: '1.5em'}}>
                 {featureList}
             </List>
             
