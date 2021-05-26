@@ -3,6 +3,7 @@ import MyDnD from '../images/MyDnD.png'
 import ApartmentHunter from '../images/ApartmentHunter.png'
 import MiddleSchoolMadness from '../images/MiddleSchoolMadness.png'
 import { Card, Image, Button } from 'semantic-ui-react'
+import styled from 'styled-components'
 
 const ProjectCard = ({ name }) => {
 
@@ -33,11 +34,17 @@ const ProjectCard = ({ name }) => {
         }
     }
 
+    const H2 = styled.h2`
+    font-family: Optima, sans-serif;
+    color: #0096c7;
+    text-align: center;
+    `
+
     return (
-        <Card raised fluid color={projectObject[name].color}>
+        <Card raised fluid color={projectObject[name].color} >
             <Image src={projectObject[name].image} size='big' />
             <Card.Content extra>
-            <Card.Header as='h2' textAlign='center'>{projectObject[name].title}</Card.Header>
+            <H2>{projectObject[name].title}</H2>
             <Button.Group fluid>
                 <Button color='violet' onClick={()=>window.open(projectObject[name].frontend, '_blank')}>Frontend</Button>
                 <Button color='blue' onClick={()=>window.open(projectObject[name].backend, '_blank')}>Backend</Button>

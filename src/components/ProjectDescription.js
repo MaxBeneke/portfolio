@@ -1,7 +1,7 @@
 import React from 'react'
-import {Header, List, Segment} from 'semantic-ui-react'
+import {Popup, List, Segment} from 'semantic-ui-react'
 import styled from 'styled-components'
-import { DiJavascript1, DiRor, DiPostgresql, DiReact, DiRedux } from 'react-icons/di'
+import { DiJavascript1, DiRor, DiPostgresql, DiReact } from 'react-icons/di'
 import { Icon } from '@iconify/react';
 import reduxIcon from '@iconify-icons/simple-icons/redux';
 import graphqlIcon from '@iconify-icons/logos/graphql';
@@ -26,7 +26,7 @@ const ProjectDescription = ({ name }) => {
         MiddleSchoolMadness: {
             title: 'Middle School Madness',
             technologies: ['Javascript', 'Ruby on Rails', 'PostgreSQL', 'HTML & CSS'],
-            description: ['Maze-like RPG game where users collect items and fight enemies to escape middle school', "Utilizes CSS grid properties and Javascript to move characters and enter battle arenas", 'Customized dialogue text scrolls, level-up mechanics, and usable item pickups'],
+            description: ['RPG game where users collect items and fight enemies to escape middle school', "Utilizes CSS grid properties and Javascript to move characters and enter battle arenas", 'Customized dialogue text scrolls, level-up mechanics, and usable item pickups'],
             color: 'yellow'
         }
     }
@@ -38,34 +38,134 @@ const ProjectDescription = ({ name }) => {
 
     const myDnDIcons = (
     <>
-        <DiReact size={50} color='#66ccff'/> 
-        <Icon icon={reduxIcon} color="#9966cc" />
-        <Icon icon={graphqlIcon} />
-        <DiJavascript1 size={50} color='yellow'/> 
-        <DiRor size={50} color='red' borderColor='black'/>
-        <DiPostgresql size={50} color='black'/> 
+        <Popup 
+        trigger={<Icon icon={reduxIcon} width='2.75em' height='2.75em' color="#9966cc" style={{marginBottom: '.4em'}}/>}
+        content='Redux'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+        <Popup 
+        trigger={<DiReact size={50} color='#66ccff'/>} 
+        content='React'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+        <Popup 
+        trigger={<DiJavascript1 size={50} color='yellow'/> } 
+        content='Javascript'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+        <Popup 
+        trigger={<DiRor size={50} color='red'/>} 
+        content='Ruby on Rails'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+         <Popup 
+        trigger={<DiPostgresql size={50} color='black'/>} 
+        content='Postgresql'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+         <Popup 
+        trigger={<Icon icon={graphqlIcon} width='2.75em' height='2.75em' style={{marginBottom: '.4em'}} />} 
+        content='GraphQL'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
     </>
     )
 
     const apartmentHunterIcons = (
-        <>
-            <DiReact size={50} color='#66ccff'/> 
-            <DiJavascript1 size={50} color='yellow'/> 
-            <DiRor size={50} color='red' borderColor='black'/>
-            <DiPostgresql size={50} color='black'/> 
-        </>
-        )
+    <>
+        <Popup 
+        trigger={<DiReact size={50} color='#66ccff'/>} 
+        content='React'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+        <Popup 
+        trigger={<DiJavascript1 size={50} color='yellow'/> } 
+        content='Javascript'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+        <Popup 
+        trigger={<DiRor size={50} color='red'/>} 
+        content='Ruby on Rails'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+         <Popup 
+        trigger={<DiPostgresql size={50} color='black'/>} 
+        content='Postgresql'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+    </>
+    )
+
+    const middleSchoolMadnessIcons = (
+    <>
+        <Popup 
+        trigger={<DiJavascript1 size={50} color='yellow'/> } 
+        content='Javascript'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+        <Popup 
+        trigger={<DiRor size={50} color='red'/>} 
+        content='Ruby on Rails'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+         <Popup 
+        trigger={<DiPostgresql size={50} color='black'/>} 
+        content='Postgresql'
+        inverted
+        size='mini'
+        position='bottom center'
+        style={{opacity: '0.8'}}
+        />
+    </>
+    )
 
 
     const featureList = projectObject[name].description.map(feature => <List.Item>{feature}</List.Item> )
 
     return (
-        <Segment color={projectObject[name].color} style={{backgroundColor: '#e0e0e0'}}>
+        <Segment color={projectObject[name].color} style={{backgroundColor: '#e8e8e8'}}>
             <H2>
                 {projectObject[name].title}
             </H2>
-            {/* <Header as='h5'>{projectObject[name].technologies.join(', ')}</Header> */}
             {name === 'MyDnD' && myDnDIcons}
+            {name === 'ApartmentHunter' && apartmentHunterIcons}
+            {name === 'MiddleSchoolMadness' && middleSchoolMadnessIcons}
             <List bulleted relaxed='very' style={{color: '#0077b6', fontFamily: 'Georgia, serif', fontSize: '1.5em'}}>
                 {featureList}
             </List>

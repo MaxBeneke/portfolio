@@ -1300,6 +1300,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify-icons/logos@^1.1.9":
+  "integrity" "sha512-+myjzWPtTp7vNYrl2t7gV4xojG3Rl2b8xw6sD0V0dib/h1UwsTYo4X7AaLQDrdO8Bxe1wzQfhSgS6qLbBRYCpw=="
+  "resolved" "https://registry.npmjs.org/@iconify-icons/logos/-/logos-1.1.9.tgz"
+  "version" "1.1.9"
+
 "@iconify-icons/simple-icons@^1.1.26":
   "integrity" "sha512-QU0O1VSlAX+ElAPvx2hkn9Ljsf1Y2F4XL7fW26+8TFOyiPJdgYSH0WqVr/ste1Ll5iC8bEzLimKz1rE2nTZ0WA=="
   "resolved" "https://registry.npmjs.org/@iconify-icons/simple-icons/-/simple-icons-1.1.26.tgz"
