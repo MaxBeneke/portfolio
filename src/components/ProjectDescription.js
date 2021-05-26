@@ -1,6 +1,12 @@
 import React from 'react'
 import {Header, List, Segment} from 'semantic-ui-react'
 import styled from 'styled-components'
+import { DiJavascript1, DiRor, DiPostgresql, DiReact, DiRedux } from 'react-icons/di'
+import { Icon } from '@iconify/react';
+import reduxIcon from '@iconify-icons/simple-icons/redux';
+import graphqlIcon from '@iconify-icons/logos/graphql';
+
+
 
 const ProjectDescription = ({ name }) => {
 
@@ -30,14 +36,36 @@ const ProjectDescription = ({ name }) => {
         color: #0096c7;
     `;
 
+    const myDnDIcons = (
+    <>
+        <DiReact size={50} color='#66ccff'/> 
+        <Icon icon={reduxIcon} color="#9966cc" />
+        <Icon icon={graphqlIcon} />
+        <DiJavascript1 size={50} color='yellow'/> 
+        <DiRor size={50} color='red' borderColor='black'/>
+        <DiPostgresql size={50} color='black'/> 
+    </>
+    )
+
+    const apartmentHunterIcons = (
+        <>
+            <DiReact size={50} color='#66ccff'/> 
+            <DiJavascript1 size={50} color='yellow'/> 
+            <DiRor size={50} color='red' borderColor='black'/>
+            <DiPostgresql size={50} color='black'/> 
+        </>
+        )
+
+
     const featureList = projectObject[name].description.map(feature => <List.Item>{feature}</List.Item> )
 
     return (
-        <Segment color={projectObject[name].color}>
+        <Segment color={projectObject[name].color} style={{backgroundColor: '#e0e0e0'}}>
             <H2>
                 {projectObject[name].title}
             </H2>
-            <Header as='h5'>{projectObject[name].technologies.join(', ')}</Header>
+            {/* <Header as='h5'>{projectObject[name].technologies.join(', ')}</Header> */}
+            {name === 'MyDnD' && myDnDIcons}
             <List bulleted relaxed='very' style={{color: '#0077b6', fontFamily: 'Georgia, serif', fontSize: '1.5em'}}>
                 {featureList}
             </List>
