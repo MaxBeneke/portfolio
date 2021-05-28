@@ -34,6 +34,7 @@ const ProjectDescription = ({ name }) => {
     const H2 = styled.h2`
         font-family: Optima, sans-serif;
         color: #0096c7;
+        text-shadow: 2px 2px 3px black;
     `;
 
     const myDnDIcons = (
@@ -159,14 +160,14 @@ const ProjectDescription = ({ name }) => {
     const featureList = projectObject[name].description.map(feature => <List.Item>{feature}</List.Item> )
 
     return (
-        <Segment color={projectObject[name].color} style={{backgroundColor: '#e8e8e8'}}>
+        <Segment basic >
             <H2>
                 {projectObject[name].title}
             </H2>
             {name === 'MyDnD' && myDnDIcons}
             {name === 'ApartmentHunter' && apartmentHunterIcons}
             {name === 'MiddleSchoolMadness' && middleSchoolMadnessIcons}
-            <List bulleted relaxed='very' style={{color: '#0077b6', fontFamily: 'Georgia, serif', fontSize: '1.5em'}}>
+            <List bulleted relaxed='very' style={{color: '#3399ff', fontFamily: 'Georgia, serif', fontSize: '1.5em', textShadow: '2px 2px 3px black'}}>
                 {featureList}
             </List>
             

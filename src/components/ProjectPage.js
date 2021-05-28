@@ -1,13 +1,14 @@
 import React from 'react'
-import { Segment, Grid } from 'semantic-ui-react'
+import { Segment, Grid, Header} from 'semantic-ui-react'
 import ProjectCard from './ProjectCard'
 import ProjectDescription from './ProjectDescription'
 
 const ProjectPage = () => {
     return (
-        <div>
-            <Segment basic>
-                <Grid columns={2}>
+        <div style={{backgroundColor: '#4d4d4d', opacity: '0.8'}}>
+            <Segment basic padded='very' >
+                <Header as='h1' textAlign='center' style={{fontFamily: 'Optima, sans-serif', color: '#0096c7', fontSize: '4em', textShadow: '2px 2px 3px black'}}>Projects</Header>
+                <Grid padded='vertically' divided='vertically' columns={2}>
                     <Grid.Column width={6}>
                         <ProjectCard key='MyDnD' name='MyDnD' />
                     </Grid.Column>
@@ -16,7 +17,7 @@ const ProjectPage = () => {
                     </Grid.Column>
                 </Grid>
             </Segment>
-            <Segment basic>
+            <Segment basic padded='very'>
                 <Grid columns={2}>
                     <Grid.Column width={6}>
                         <ProjectCard key='ApartmentHunter' name='ApartmentHunter' />   
@@ -26,7 +27,7 @@ const ProjectPage = () => {
                     </Grid.Column>
                 </Grid>
             </Segment>
-            <Segment basic>
+            <Segment basic padded='very'>
                 <Grid columns={2}>
                     <Grid.Column width={6}>
                         <ProjectCard key='MiddleSchoolMadness' name='MiddleSchoolMadness' />
