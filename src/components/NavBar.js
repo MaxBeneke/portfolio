@@ -7,7 +7,7 @@ const NavBar = () => {
     const [clicked, setClicked] = useState('')
 
     return (
-        <Menu secondary color='blue' size='large' style={{fontFamily: 'Verdana, sans-serif'}}>
+        <Menu secondary size='large' style={{fontFamily: 'Verdana, sans-serif'}}>
             <Menu.Item
                 name='home'
                 active={clicked === 'home'}

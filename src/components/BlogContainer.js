@@ -20,7 +20,7 @@ const BlogContainer = () => {
     })
 
     return (
-        <div>
+        <div style={{position: 'absolute', top: '20%'}}>
             <Header textAlign='center' as='h1' style={{fontFamily: 'Optima, sans-serif'}}>Blogs</Header>
             <Segment basic style={{maxHeight: '70vh'}}>
                 <Card.Group itemsPerRow={4}>
