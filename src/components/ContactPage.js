@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Header, Segment, Icon } from 'semantic-ui-react'
 
 const ContactPage = () => {
+    const [gitColor, setGitColor] = useState(false)
+    const [mediumColor, setMediumColor] = useState(false)
+    
     return (
         <div style={{position: 'fixed', left: '35%', top: '25%'}}>
         <Segment verticalAlign='middle' raised circular color='blue' style={{textAlign: 'center', marginTop: '10em', backgroundColor: '#4d4d4d', opacity: '0.8'}}>
@@ -18,10 +21,22 @@ const ContactPage = () => {
                     <Icon size='big' name='linkedin'/> 
                 </a>
                 <a href='https://github.com/MaxBeneke' target='_blank' rel='noreferrer'>
-                    <Icon size='big' name='github' color='black'/> 
+                    <Icon 
+                    size='big'
+                    name='github' 
+                    color={gitColor ? 'grey' : 'black'}
+                    onMouseEnter={() => setGitColor(true)}
+                    onMouseLeave={() => setGitColor(false)}
+                    /> 
                 </a>
                 <a href='https://max-beneke.medium.com/' target='_blank' rel='noreferrer'>
-                    <Icon size='big' name='medium' color='black'/> 
+                    <Icon 
+                    size='big' 
+                    name='medium' 
+                    color={mediumColor ? 'grey' : 'black'}
+                    onMouseEnter={() => setMediumColor(true)}
+                    onMouseLeave={() => setMediumColor(false)}
+                    /> 
                 </a>
             </Segment>
             

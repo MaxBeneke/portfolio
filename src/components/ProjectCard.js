@@ -38,6 +38,7 @@ const ProjectCard = ({ name }) => {
     font-family: Optima, sans-serif;
     color: #0096c7;
     text-align: center;
+    text-shadow: 1px 1px 1px black
     `
 
     return (

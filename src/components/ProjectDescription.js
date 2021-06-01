@@ -33,6 +33,7 @@ const ProjectDescription = ({ name }) => {
 
     const H2 = styled.h2`
         font-family: Optima, sans-serif;
+        font-size: 3em;
         color: #0096c7;
         text-shadow: 2px 2px 3px black;
     `;
@@ -160,7 +161,7 @@ const ProjectDescription = ({ name }) => {
     const featureList = projectObject[name].description.map(feature => <List.Item>{feature}</List.Item> )
 
     return (
-        <Segment basic >
+        <Segment basic>
             <H2>
                 {projectObject[name].title}
             </H2>
